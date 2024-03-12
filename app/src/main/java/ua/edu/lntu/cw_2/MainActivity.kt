@@ -78,6 +78,15 @@ fun Project() {
                 onValueChange = { password = it }
 
             )
+            Spacer(modifier = Modifier.height(18.dp))
+            Button(onClick = {
+                if (
+                    email.text.isNotEmpty() && password.text.isNotEmpty()) {
+                    sign = true
+                }
+            }) {
+                Text("Sign In")
+            }
         }
     }
 }
