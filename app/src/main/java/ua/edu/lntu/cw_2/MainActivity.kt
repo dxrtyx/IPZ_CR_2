@@ -61,6 +61,12 @@ fun Project() {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.ic_main),
+                contentDescription = "Email icon",
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+
+            )
             OutlinedTextField(
                 value = email,
                 label = { Text("Email") },
