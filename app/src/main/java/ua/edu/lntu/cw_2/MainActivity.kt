@@ -35,7 +35,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             IPZ_CW_2_Vyrymchuk_BohdanTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -65,15 +64,16 @@ fun Project() {
                 painter = painterResource(id = R.drawable.ic_main),
                 contentDescription = "Email icon",
                 modifier = Modifier.align(Alignment.CenterHorizontally),
-
-            )
+                )
             OutlinedTextField(
                 value = email,
+                shape = RoundedCornerShape(8.dp),
                 label = { Text("Email") },
                 onValueChange = { email = it }
             )
             OutlinedTextField(
                 value = password,
+                shape = RoundedCornerShape(8.dp),
                 label = { Text("Password") },
                 onValueChange = { password = it }
 
@@ -88,10 +88,12 @@ fun Project() {
                 Text("Sign In")
             }
         }
-    } else {
+    }
+
+    else {
         Column(
             modifier = Modifier
-                .padding(18.dp)
+                .padding(16.dp)
                 .fillMaxWidth(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
