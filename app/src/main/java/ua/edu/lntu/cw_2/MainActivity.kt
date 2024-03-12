@@ -98,6 +98,11 @@ fun Project() {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.ic_main),
+                contentDescription = "Email icon",
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+            )
             Text("Sign In Success")
             Spacer(modifier = Modifier.height(10.dp))
             Text("Email: ${email.text}")
