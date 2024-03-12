@@ -100,6 +100,13 @@ fun Project() {
             Spacer(modifier = Modifier.height(10.dp))
             Text("Email: ${email.text}")
             Spacer(modifier = Modifier.height(18.dp))
+            Button(onClick = {
+                sign = false
+                email = TextFieldValue()
+                password = TextFieldValue()
+            }) {
+                Text("Sign Out")
+            }
         }
     }
 }
