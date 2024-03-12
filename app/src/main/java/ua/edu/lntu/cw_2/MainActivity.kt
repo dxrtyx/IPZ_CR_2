@@ -88,6 +88,19 @@ fun Project() {
                 Text("Sign In")
             }
         }
+    } else {
+        Column(
+            modifier = Modifier
+                .padding(18.dp)
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text("Sign In Success")
+            Spacer(modifier = Modifier.height(10.dp))
+            Text("Email: ${email.text}")
+            Spacer(modifier = Modifier.height(18.dp))
+        }
     }
 }
 
